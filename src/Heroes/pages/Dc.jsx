@@ -1,12 +1,14 @@
-import React from 'react'
+import React from "react";
+import HeroeList from "../Components/HeroeList";
 
 const Dc = () => {
   return (
     <div>
-      <h1>Dc</h1>
+      <h1>Dc comics</h1>
+      <HeroeList
+       publisher="DC Comics" />
     </div>
+  );
+};
 
-  )
-}
-
-export default Dc
+export default Dc;
