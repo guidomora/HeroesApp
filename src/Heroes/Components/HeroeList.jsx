@@ -1,11 +1,13 @@
 import React, { useMemo } from "react";
-import { getHeroesByPublisher } from "../helpers/GetHeroesByPublisher";
 import Herocard from "./Herocard";
+import {getHeroesByPublisher} from "../helpers/getHeroesByPublisher"
 
 const HeroeList = ({ publisher }) => {
   // Segun el publisher que le pasemos a cada pagina, hace un mapeo de todos los
   // suerheroes
   const heroes = useMemo(() => getHeroesByPublisher(publisher), [publisher]) ;
+
+
 
   return (
     <div className="row rows-cols-1 row-cols-md-3 g-3">
