@@ -6,6 +6,7 @@ import LoginPage from '../../Auth/pages/LoginPage'
 import { Route, Routes, Navigate } from 'react-router-dom'
 import Hero from "../pages/Hero"
 import Search from "../pages/Search"
+import AllHeroes from '../pages/AllHeroes'
 
 
 const HeroesRoutes = () => {
@@ -18,7 +19,8 @@ const HeroesRoutes = () => {
                 <Route path="login" element={<LoginPage />} />
                 <Route path="search" element={<Search />} />
                 <Route path="hero/:id" element={<Hero />} />
-                <Route path="/" element={<Navigate to="/marvel" />} />
+                <Route path="/" element={<AllHeroes />} />
+                <Route path="/" element={<Navigate to="/home" />} />
             </Routes>
         </>
     )
