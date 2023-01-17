@@ -2,6 +2,6 @@
 // con redux esto se elimina
 
 export const types = {
-    login: "[Auth] login",
-    logout: "[Auth] logout",
+    login: "[Auth] Login",
+    logout: "[Auth] Logout",
 }
