@@ -9,11 +9,19 @@ const LoginPage = () => {
   const navigate = useNavigate()
 
   const onLogin = () => {
+
+  // Si el lasPath es nulo devuelve  "/" que es lo que tomaria el navigate mas abajo
+    const lastPath = localStorage.getItem("lastPath") || "/"
+
+
     // Para poder hacer el dispatch
-    login("Guido Morabito");
+    login("User");
 
     // Una vez que pasa el login te manda a la pag principal
-    navigate("/", {replace: true})
+    // navigate("/", {replace: true})
+
+    // navigate actualizado para recordar la ultima pagiona visitada
+    navigate(lastPath, {replace: true})
   }
 
 

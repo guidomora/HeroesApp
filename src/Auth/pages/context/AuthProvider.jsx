@@ -39,11 +39,20 @@ const AuthProvider = ({ children }) => {
     dispatch(action);
   };
 
+  // Removemos el user del localStorage, pasamos la accion y que tipo es, al dispatch le pasamos la accion
+
+  const logout = () => {
+    localStorage.removeItem("user");
+    const action = {type : types.logout};
+    dispatch(action)
+  }
+
   return (
     <AuthContext.Provider
       value={{
         ...authState,
         login: login,
+        logout: logout
       }}
     >
       {children}

@@ -6,15 +6,17 @@ import { AuthContext } from '../Auth/pages/context/AuthContext';
 
 export const Navbar = () => {
 
-    const {user } = useContext(AuthContext)
-    console.log(user) 
+    const {user, logout } = useContext(AuthContext)
+
 
     const navigate = useNavigate()
 
     const onLogout = () => {
+        logout();
         // primer argumento establece la ruta a la cual vamos a navegar, el segundo evita que la persona pueda
         // volver para atras en el historial (en este caso pq seria un login, nos sirve)
         navigate("/login", {replace: true})
+        
     }
 
 
