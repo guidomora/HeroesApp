@@ -11,7 +11,7 @@ const Herocard = ({
   characters,
 }) => {
 
-    const heroImageUrl = `/heroes/${id}.jpg`
+    const heroImageUrl = `./assets/heroes/${id}.jpg`
 
   return (
     // Animaciones clase de animate etc

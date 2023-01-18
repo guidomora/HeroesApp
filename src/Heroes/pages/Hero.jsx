@@ -3,6 +3,7 @@ import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { getHeroById } from "../helpers/getHeroById";
 
 const Hero = () => {
+
   const { id } = useParams();
 
   // No es obligatorio usar el useMemo, pero lo aplicamos para reducir desgaste
@@ -18,6 +19,9 @@ const Hero = () => {
     navigate(-1);
   };
 
+  // ----------------------------------------
+  const heroImageUrl = `./../assets/heroes/${id}.jpg`
+
   // Si la ruta no existe, automatcamente te manda a otra pagina
 
   if (!hero) {
@@ -28,7 +32,7 @@ const Hero = () => {
     <div className="row mt-5">
       <div className="col-4 animate__animated animate__slideInLeft">
         <img
-          src={`/Assets/heroes/${hero.id}.jpg`}
+          src={heroImageUrl}
           alt={hero.superhero}
           className="img-thumbnail"
         />
