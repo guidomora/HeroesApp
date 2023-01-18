@@ -20,7 +20,7 @@ const Hero = () => {
   };
 
   // ----------------------------------------
-  const heroImageUrl = `./../assets/heroes/${id}.jpg`
+  const heroImageUrl = `./../Assets/heroes/${id}.jpg`
 
   // Si la ruta no existe, automatcamente te manda a otra pagina
 
